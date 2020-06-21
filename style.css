@@ -40,4 +40,42 @@ h1 {
 .main-right_hexcode {
     display: flex; 
     justify-content: space-between; 
+    color: #53626b;
+}
+
+.main-right_directions {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+.main-right_directions button {
+    background: none; 
+    border: 2px solid #ccd6e4;
+    border-radius: 5px; 
+    color: #ccd6e4; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; 
+    width: 45%; 
+    margin-top: 20px;
+    font-size: 16px; 
+    outline: none; 
+}
+
+.text-btn {
+    color: #58676f; 
+    margin-top: 5px; 
+}
+
+button:hover {
+    cursor: pointer;
+    color: #ff7473;
+    border: 2px solid #ff7473; 
+}
+
+button:hover .text-btn {
+    color: #ff7473;
 }
