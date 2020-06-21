@@ -15,29 +15,29 @@
             </section>
             <section class="main">
                 <div class="main-left">
-                    <div class="main-left_color"></div>
+                    <div id="colorBlock" class="main-left_color"></div>
                 </div>
                 <div class="main-right">
                     <div class="main-right_buttons">
                         <div class="main-right_hexcode">
-                            <div><input type="text"></div>
-                            <div><i class="fas fa-random"></i></a></div>
-                            <div><input type="text"></div>
+                            <div><input id="colorInputTextOne" type="text" value="#FFC0CB" class="colorInputText" spellcheck="false"></div>
+                            <button id="randomBtn" class="random-btn"><i class="fas fa-random"></i><span class="tooltiptext">Switch colors</span></button>
+                            <div><input id="colorInputTextTwo" type="text" value="#FFC" class="colorInputText" spellcheck="false"></div>
                         </div>
                         <div class="main-right_directions">
-                            <button>
+                            <button id="horizontalDirection" class="direction-btn active">
                                 <i class="fas fa-long-arrow-alt-right"></i>
                                 <span class="text-btn">horizontal</span>
                             </button>
-                            <button>
+                            <button id="verticalDirection" class="direction-btn">
                                 <i class="fas fa-long-arrow-alt-up"></i>
                                 <span class="text-btn">vertical</span>
                             </button>
-                            <button>
+                            <button id="radialDirection" class="direction-btn">
                                 <i class="far fa-dot-circle"></i>
                                 <span class="text-btn">radial</span>
                             </button>
-                            <button>
+                            <button id="diagonalDirection" class="direction-btn">
                                 <i class="fas fa-expand-alt"></i>
                                 <span class="text-btn">diagonal</span>
                             </button>

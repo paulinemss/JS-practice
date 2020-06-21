@@ -26,7 +26,7 @@ h1 {
 }
 
 .main-left_color {
-    background: #fd9483; 
+    background-image: linear-gradient(to right, #FFC0CB , #ffc);
     height: 500px;
     width: 500px; 
     border-radius: 10px;
@@ -40,16 +40,83 @@ h1 {
 .main-right_hexcode {
     display: flex; 
     justify-content: space-between; 
+    align-items: baseline;
     color: #53626b;
+}
+
+.colorInputText {
+    outline: none;
+    padding: 10px 5px; 
+    border-radius: 5px; 
+}
+
+#colorInputTextOne {
+    border: 2px solid #FFC0CB; 
+}
+
+#colorInputTextTwo {
+    border: 2px solid #ffc; 
+}
+
+.random-btn {
+    background: none; 
+    border: none; 
+    position: relative;
+    display: inline-block;
+}
+
+.random-btn:hover {
+    color: #ff7473;
+    cursor: pointer;
+    border: none; 
+    outline: none; 
+}
+
+.random-btn:focus {
+    outline: none; 
+}
+
+.tooltiptext {
+    visibility: hidden; 
+    width: 100px;
+    background-color: #2f3545; 
+    font-size: 12px; 
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    font-family: 'Open Sans'; 
+    top: 100%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 18px; 
+    font-weight: 600; 
+}
+
+.random-btn:hover .tooltiptext {
+    visibility: visible;
+}
+
+.random-btn .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #2f3545 transparent;
 }
 
 .main-right_directions {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: space-between;
+    margin-top: 40px; 
 }
 
-.main-right_directions button {
+.direction-btn {
     background: none; 
     border: 2px solid #ccd6e4;
     border-radius: 5px; 
@@ -70,12 +137,21 @@ h1 {
     margin-top: 5px; 
 }
 
-button:hover {
+.active {
+    color: #ff7473;
+    border: 2px solid #ff7473; 
+}
+
+.active .text-btn {
+    color: #ff7473;
+}
+
+.direction-btn:hover {
     cursor: pointer;
     color: #ff7473;
     border: 2px solid #ff7473; 
 }
 
-button:hover .text-btn {
+.direction-btn:hover .text-btn {
     color: #ff7473;
 }
