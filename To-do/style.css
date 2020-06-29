@@ -63,7 +63,8 @@ h2 {
     border-radius: 10px; 
     background-color: #fff;
     width: 400px; 
-    margin-left: 40px; 
+    margin-left: 40px;
+    margin-bottom: 20px;  
 }
 
 .add-task_title {
@@ -98,4 +99,41 @@ h2 {
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     width: 46px;
     height: 50px;
+}
+
+.allToDos {
+    margin-top: -20px; 
+}
+
+.todo {
+    background: #fff; 
+    padding: 20px 40px; 
+    border-radius: 10px; 
+    background-color: #fff;
+    width: 400px; 
+    margin-left: 40px; 
+    display: flex; 
+    align-items: center;
+    font-size: 18px; 
+    margin-top: 20px; 
+}
+
+.todo_checkbox button {
+    cursor: pointer;
+    background: none;
+    border: none; 
+    outline: none; 
+    font-size: 20px; 
+}
+
+.todo_description {
+    margin-left: 20px; 
+}
+
+.unchecked {
+    text-decoration: none;
+}
+
+.checked {
+    text-decoration: line-through;
 }
