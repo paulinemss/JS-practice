@@ -1,13 +1,21 @@
+// variables from ID 
+
 const buttonAddTask = document.getElementById('buttonAddTask'); 
 const addTaskForm = document.getElementById('addTaskForm'); 
 const addTaskInput = document.getElementById('addTaskInput'); 
 const buttonAddInput = document.getElementById('buttonAddInput'); 
 
+// user data arrays
+
 const userInput = []; 
 const checkedToDos = []; 
 
+// variables for current date 
+
 const now = new Date();
 const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; 
+
+// function to check the date and render it on the page
 
 function checkDate() {
     const nowDay = daysOfTheWeek[now.getDay()]; 
@@ -16,6 +24,8 @@ function checkDate() {
     document.getElementById('nowDate').innerHTML = nowDate;
 }
 
+// function to show/hide the add task window 
+
 function addTask() {
     if (addTaskForm.style.display === 'none') {
         addTaskForm.style.display = 'block';
@@ -23,6 +33,8 @@ function addTask() {
         addTaskForm.style.display = 'none';
     }
 }
+
+// function to add input from the form into a to-do element
 
 function addInput() {
     if (addTaskInput.value != '') {
@@ -33,6 +45,8 @@ function addInput() {
     addTaskInput.value = ''; 
 }
 
+// function to check/uncheck boxes in the to-do elements 
+
 function checkUncheck(val) {
     let elementIndex = checkedToDos.indexOf(val); 
     if (elementIndex === -1) {
@@ -42,6 +56,8 @@ function checkUncheck(val) {
     }
     renderToDo(); 
 }
+
+// function to create a to-do element based on the form input 
 
 function renderToDo() {
     let str = '';
@@ -70,6 +86,8 @@ function renderToDo() {
     }
     document.getElementById('allToDos').innerHTML = str;
 }
+
+// call functions and event listeners 
 
 checkDate(); 
 buttonAddTask.addEventListener('click', addTask); 
