@@ -7,8 +7,8 @@ const buttonAddInput = document.getElementById('buttonAddInput');
 
 // user data arrays
 
-const userInput = []; 
-const checkedToDos = []; 
+let userInput = []; 
+let checkedToDos = []; 
 
 // variables for current date 
 
@@ -37,10 +37,11 @@ function addTask() {
 // function to add input from the form into a to-do element
 
 function addInput() {
-    if (addTaskInput.value != '') {
+    if (addTaskInput.value !== '') {
         userInput.unshift(addTaskInput.value); 
         renderToDo(); 
         addTask();
+        localStorage.setItem('userInput', JSON.stringify(userInput));
     }
     addTaskInput.value = ''; 
 }
@@ -51,8 +52,10 @@ function checkUncheck(val) {
     let elementIndex = checkedToDos.indexOf(val); 
     if (elementIndex === -1) {
         checkedToDos.push(val); 
+        localStorage.setItem('checkedToDos', JSON.stringify(checkedToDos));
     } else {
         checkedToDos.splice(elementIndex, 1); 
+        localStorage.setItem('checkedToDos', JSON.stringify(checkedToDos));
     }
     renderToDo(); 
 }
@@ -87,8 +90,22 @@ function renderToDo() {
     document.getElementById('allToDos').innerHTML = str;
 }
 
+// get user input from local storage
+
+function loadInitialData() {
+    if (localStorage.getItem('userInput')) {
+        userInput = JSON.parse(localStorage.getItem('userInput')); 
+        renderToDo(); 
+    };
+    if (localStorage.getItem('checkedToDos')) {
+        checkedToDos = JSON.parse(localStorage.getItem('checkedToDos')); 
+        renderToDo();
+    };
+}
+
 // call functions and event listeners 
 
 checkDate(); 
+loadInitialData(); 
 buttonAddTask.addEventListener('click', addTask); 
 buttonAddInput.addEventListener('click', addInput); 
