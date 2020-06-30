@@ -101,8 +101,9 @@ h2 {
     height: 50px;
 }
 
-.allToDos {
-    margin-top: -20px; 
+#allToDos {
+    overflow: auto;
+    width: 600px; 
 }
 
 .todo {

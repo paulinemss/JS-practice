@@ -29,8 +29,10 @@ function checkDate() {
 function addTask() {
     if (addTaskForm.style.display === 'none') {
         addTaskForm.style.display = 'block';
+        document.getElementById('allToDos').style.height = '50vh'; 
     } else {
         addTaskForm.style.display = 'none';
+        document.getElementById('allToDos').style.height = '70vh'; 
     }
 }
 
