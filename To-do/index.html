@@ -15,7 +15,7 @@
             <div class="title_text">
                 <h1>Today's schedule</h1>
                 <div class="title_text_date">
-                    <h2>Saturday 27</h2>
+                    <h2><span id="nowDay"></span><span id="nowDate"></span></h2>
                     <button class="title_text_date_btn"><i class="fas fa-arrow-left"></i></button>
                     <button class="title_text_date_btn"><i class="fas fa-arrow-right"></i></button>
                 </div>
@@ -25,7 +25,7 @@
             </div>
         </section>
 
-        <section class="add-task" id="addTaskForm" style="display: none">
+        <section class="add-task" id="addTaskForm" style="display: block">
             <div class="add-task_title">Add a new task</div> 
             <div class="add-task_form">
                 <input type="text" class="add-task_form_input" placeholder="Example: Morning Yoga" id="addTaskInput">

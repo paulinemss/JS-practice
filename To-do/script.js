@@ -6,6 +6,16 @@ const buttonAddInput = document.getElementById('buttonAddInput');
 const userInput = []; 
 const checkedToDos = []; 
 
+const now = new Date();
+const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; 
+
+function checkDate() {
+    const nowDay = daysOfTheWeek[now.getDay()]; 
+    document.getElementById('nowDay').innerHTML = nowDay + ' ';
+    const nowDate = now.getDate(); 
+    document.getElementById('nowDate').innerHTML = nowDate;
+}
+
 function addTask() {
     if (addTaskForm.style.display === 'none') {
         addTaskForm.style.display = 'block';
@@ -16,8 +26,9 @@ function addTask() {
 
 function addInput() {
     if (addTaskInput.value != '') {
-        userInput.push(addTaskInput.value); 
+        userInput.unshift(addTaskInput.value); 
         renderToDo(); 
+        addTask();
     }
     addTaskInput.value = ''; 
 }
@@ -60,5 +71,6 @@ function renderToDo() {
     document.getElementById('allToDos').innerHTML = str;
 }
 
+checkDate(); 
 buttonAddTask.addEventListener('click', addTask); 
 buttonAddInput.addEventListener('click', addInput); 
