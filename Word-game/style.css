@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Press Start 2P'; 
+    background: #fafafc; 
+    display: flex; 
+    justify-content: center;
+    color: #333030; 
+}
+
+.main {
+    width: 800px; 
+    margin-top: 30px; 
+    background: #fff; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px; 
+    box-sizing: border-box;
+    border: 2px solid #333030;
+}
+
+.main_menu {
+    display: flex;
+    width: 100%; 
+    justify-content: space-between;
+    font-size: 16px; 
+}
+
+.btn-restart {
+    background: none;
+    border: none; 
+    font-family: 'Press Start 2P';
+    cursor: pointer;
+    font-size: 16px; 
+    color: #333030;
+    outline: none;
+}
+
+.btn-restart:hover {
+    color: #ED6A5A; 
+}
+
+.main_title {
+    margin-top: 60px;
+    font-size: 28px; 
+}
+
+.main_word {
+    font-size: 24px; 
+    margin-top: 40px; 
+}
+
+.main_letters-first {
+    margin-top: 50px; 
+}
+
+.main_letters-second {
+    margin-top: 20px; 
+}
+
+.btn-letter {
+    background: none;
+    border: 2px solid #333030;
+    color: #333030; 
+    padding: 5px; 
+    font-family: 'Press Start 2P';
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-letter:hover {
+    color: #ED6A5A; 
+}
+
+.main_hint {
+    margin-top: 40px; 
+}
+
+.main_hint-word {
+    color: #5CA4A9; 
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Word Game</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/a8d780712a.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0"/> 
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="main_menu">
+                <div class="main_menu-restart">
+                    <button class="btn-restart" onClick="window.location.reload();">NEW GAME</button>
+                </div>
+                <div class="main_menu-fails">
+                    FAILS: <span id="failCount"></span>/8
+                </div>
+            </div>
+            <div class="main_title" id="mainTitle">
+                Guess the word!
+            </div>
+            <div class="main_word">
+                <span id="wordToFind"></span>
+            </div>
+            <div class="main_letters-first">
+                <button class="btn-letter">A</button>
+                <button class="btn-letter">B</button>
+                <button class="btn-letter">C</button>
+                <button class="btn-letter">D</button>
+                <button class="btn-letter">E</button>
+                <button class="btn-letter">F</button>
+                <button class="btn-letter">G</button>
+                <button class="btn-letter">H</button>
+                <button class="btn-letter">I</button>
+                <button class="btn-letter">J</button>
+                <button class="btn-letter">K</button>
+                <button class="btn-letter">L</button>
+                <button class="btn-letter">M</button>
+            </div>
+            <div class="main_letters-second">
+                <button class="btn-letter">N</button>
+                <button class="btn-letter">O</button>
+                <button class="btn-letter">P</button>
+                <button class="btn-letter">Q</button>
+                <button class="btn-letter">R</button>
+                <button class="btn-letter">S</button>
+                <button class="btn-letter">T</button>
+                <button class="btn-letter">U</button>
+                <button class="btn-letter">V</button>
+                <button class="btn-letter">W</button>
+                <button class="btn-letter">X</button>
+                <button class="btn-letter">Y</button>
+                <button class="btn-letter">Z</button>
+            </div>
+            <div class="main_hint">
+                Category hint: <span class="main_hint-word" id="hintWord"></span>
+            </div>
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+
+</html>
