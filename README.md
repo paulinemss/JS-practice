@@ -5,3 +5,4 @@ Currently learning front end development, I am challenging myself with small cha
 
 1. Web Gradient Generator: https://jspractice.netlify.app/web-gradient/
 2. To-Do List: https://jspractice.netlify.app/to-do/
+3. Word Game: https://jspractice.netlify.app/word-game/
