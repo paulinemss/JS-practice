@@ -29,6 +29,11 @@ function placeSecond() {
     secondHand.style.transform = `rotate(${secondDeg}deg)`; 
 }; 
 
-window.setInterval(placeSecond, 1000); 
-window.setInterval(placeMinute, 1000); 
-window.setInterval(placeHour, 1000); 
+function renderClock() {
+    placeSecond();
+    placeMinute();
+    placeHour();
+};
+
+renderClock(); 
+window.setInterval(renderClock, 1000);
