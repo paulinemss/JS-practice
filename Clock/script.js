@@ -1,15 +1,5 @@
 
-// current time variables
-
-const now = new Date(); 
-const hour = now.getHours(); 
-const minute = now.getMinutes(); 
-const second = now.getSeconds(); 
-let hourDeg = -90; 
-let minuteDeg= -90; 
-let secondDeg= -90; 
-
-// get element by ID
+// get elements by ID
 
 const hourHand = document.getElementById('hourHand'); 
 const minuteHand = document.getElementById('minuteHand'); 
@@ -18,45 +8,27 @@ const secondHand = document.getElementById('secondHand');
 // functions to set the time
 
 function placeHour() {
-    let i = 0; 
-    do {
-        hourDeg += 30; 
-        i++;
-    } while (i<hour); 
+    const now = new Date(); 
+    const hour = now.getHours();
+    const minute = now.getMinutes();  
+    let hourDeg = (0.5 * (60 * hour + minute)) - 90; 
     hourHand.style.transform = `rotate(${hourDeg}deg)`; 
 }; 
 
 function placeMinute() {
-    let i = 0; 
-    do {
-        minuteDeg += 6; 
-        i++;
-    } while (i<minute); 
+    const now = new Date(); 
+    const minute = now.getMinutes();
+    let minuteDeg = (6 * minute) - 90; 
     minuteHand.style.transform = `rotate(${minuteDeg}deg)`; 
 }; 
 
 function placeSecond() {
-    let i = 0; 
-    do {
-        secondDeg += 6; 
-        i++;
-    } while (i<second); 
+    const now = new Date(); 
+    const second = now.getSeconds();
+    let secondDeg = (6 * second) - 90; 
     secondHand.style.transform = `rotate(${secondDeg}deg)`; 
 }; 
 
-placeHour(); 
-placeMinute(); 
-placeSecond();
-
-// functions to animate the hands
-
-function moveSecond() {
-    secondDeg += 6; 
-    secondHand.style.transform = `rotate(${secondDeg}deg)`; 
-    minuteDeg += 6 / 60; 
-    minuteHand.style.transform = `rotate(${minuteDeg}deg)`; 
-    hourDeg += 30 / 600; 
-    hourHand.style.transform = `rotate(${hourDeg}deg)`; 
-}; 
-
-window.setInterval(moveSecond, 1000); 
+window.setInterval(placeSecond, 1000); 
+window.setInterval(placeMinute, 1000); 
+window.setInterval(placeHour, 1000); 
