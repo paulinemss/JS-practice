@@ -53,6 +53,10 @@ placeSecond();
 function moveSecond() {
     secondDeg += 6; 
     secondHand.style.transform = `rotate(${secondDeg}deg)`; 
+    minuteDeg += 6 / 60; 
+    minuteHand.style.transform = `rotate(${minuteDeg}deg)`; 
+    hourDeg += 30 / 600; 
+    hourHand.style.transform = `rotate(${hourDeg}deg)`; 
 }; 
 
 window.setInterval(moveSecond, 1000); 

@@ -82,6 +82,7 @@ body {
     bottom: 0; 
     margin: auto; 
     transform-origin: center left;
+    border-radius: 5px; 
 }
 
 .minute_hand {
@@ -95,6 +96,7 @@ body {
     bottom: 0; 
     margin: auto; 
     transform-origin: center left;
+    border-radius: 5px; 
 }
 
 .second_hand {
@@ -108,4 +110,5 @@ body {
     bottom: 0; 
     margin: auto; 
     transform-origin: center left;
+    border-radius: 2px; 
 }
