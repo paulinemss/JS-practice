@@ -112,3 +112,63 @@ body {
     transform-origin: center left;
     border-radius: 2px; 
 }
+
+@media only screen and (max-width: 600px) {
+    .main_background {
+        width: 350px;
+        height: 350px; 
+    }
+    .main_clock {
+        width: 290px;
+        height: 290px; 
+    }
+    .inside_clock {
+        width: 260px;
+        height: 260px; 
+    }
+    .element {
+        display: none;
+    }
+    .center {
+        display: flex; 
+    }
+    .hour_hand {
+        width: 70px;
+        left: 70px; 
+    }
+    .minute_hand {
+        width: 100px;
+        left: 100px; 
+    }
+    .second_hand {
+        width: 120px;
+        left: 120px; 
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .main_background {
+        width: 200px;
+        height: 200px; 
+    }
+    .main_clock {
+        width: 140px;
+        height: 140px; 
+    }
+    .inside_clock {
+        width: 110px;
+        height: 110px; 
+    }
+    .hour_hand {
+        width: 40px;
+        left: 40px; 
+    }
+    .minute_hand {
+        width: 50px;
+        left: 50px; 
+    }
+    .second_hand {
+        width: 60px;
+        left: 60px; 
+    }
+}
